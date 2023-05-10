@@ -18,14 +18,14 @@ services:
     build: ./backend
     ports:
       - "5000:5000"
-    container_name: nodeapi
+    container_name: backend
     restart: always
     networks:
       - mern-stack-network
     depends_on:
-      - mongo
+      - mongodb
 
-  mongo:
+  mongodb:
     image: mongo
     ports:
       - 27017:27017
